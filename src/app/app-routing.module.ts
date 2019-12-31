@@ -57,12 +57,12 @@ import { ApplicationcontrolComponent } from './applicationcontrol/applicationcon
 import { UsersComponent } from './Dashboards/users/users.component';
 import { ControlComponent } from './DemoPages/Dashboards/control/control.component';
 import { Funny1Component } from './DemoPages/Elements/funny1/funny1.component';
-import { ManagementComponent } from './DemoPages/Dashboards/management/management.component';
+
 
 import { ESRComponent } from './DemoPages/Elements/esr/esr.component';
 import { ResourcesComponent } from './DemoPages/Elements/resources/resources.component';
 import { Dialogbox1Component } from './DemoPages/Elements/dialogbox1/dialogbox1.component';
-import { Dialogbox3Component } from './DemoPages/Elements/dialogbox3/dialogbox3.component';
+
 import { RegistrationformComponent } from './registrationform/registrationform.component';
 import { LoginformComponent } from './loginform/loginform.component';
 import { PostingComponent } from './DemoPages/Elements/posting/posting.component';
@@ -94,7 +94,7 @@ const routes: Routes = [
 
       {path:'users',component:UsersComponent, data: {extraParameter: 'dashboardsMenu'}},
       {path:'control',component:ControlComponent, data: {extraParameter: 'dashboardsMenu'}},
-      {path:'management',component:ManagementComponent,data: {extraParameter: 'dashboardsMenu'}},
+     
    
      
       // Elements

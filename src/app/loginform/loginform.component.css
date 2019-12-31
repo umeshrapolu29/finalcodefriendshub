@@ -1,5 +1,5 @@
 .container{
-    padding: 50px;
+    margin-top: 50px;
 }
 .card{
     margin-top: 50px;
@@ -11,9 +11,15 @@
     background-image: url('../../assets/images/write-593333_640.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    border: 2px solid;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     width: 750px;
     margin-left: 108px;
+}
+.logImg{
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
 }
 .colstyle{
     background: white;

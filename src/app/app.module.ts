@@ -115,7 +115,7 @@ import { ControlComponent } from './DemoPages/Dashboards/control/control.compone
 import { DelementComponent } from './Elements/delement/delement.component';
 import { FunnyComponent } from './Elements/funny/funny.component';
 import { Funny1Component } from './DemoPages/Elements/funny1/funny1.component';
-import { ManagementComponent } from './DemoPages/Dashboards/management/management.component';
+
 
 import { ESRComponent } from './DemoPages/Elements/esr/esr.component';
 import { ResourcesComponent } from './DemoPages/Elements/resources/resources.component';
@@ -126,10 +126,10 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {NgCircleProgressModule} from 'ng-circle-progress';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
-import { DialogboxComponent } from './dialogbox/dialogbox.component';
+
 import { Dialogbox1Component } from './DemoPages/Elements/dialogbox1/dialogbox1.component';
 import { Dialogbox2Component } from './DemoPages/Element/dialogbox2/dialogbox2.component';
-import { Dialogbox3Component } from './DemoPages/Elements/dialogbox3/dialogbox3.component';
+
 import { RegistrationformComponent } from './registrationform/registrationform.component';
 import { LoginformComponent } from './loginform/loginform.component';
 import { PostingComponent } from './DemoPages/Elements/posting/posting.component';
@@ -236,14 +236,14 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     DelementComponent,
     FunnyComponent,
     Funny1Component,
-    ManagementComponent,
+    
     
     ESRComponent,
     ResourcesComponent,
-    DialogboxComponent,
+   
     Dialogbox1Component,
     Dialogbox2Component,
-    Dialogbox3Component,
+   
     RegistrationformComponent,
     LoginformComponent,
     PostingComponent,
