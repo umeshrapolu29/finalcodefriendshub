@@ -1,12 +1,17 @@
+
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash&display=swap');
 .container{
     margin-top: 50px;
 }
-.card{
-    margin-top: 50px;
-    /* width: 400px; */
-     align-content: center;
-     /* margin-left: 300px; */
+ .card{
+    width: 380px;
+    border-radius: 20px;
+    overflow: hidden;
 }
+.title{
+    font-family: 'Berkshire Swash', cursive;
+}
+
 .rowbackground{
     background-image: url('../../assets/images/write-593333_640.jpg');
     background-repeat: no-repeat;
@@ -15,24 +20,42 @@
     border-radius: 4px;
     width: 750px;
     margin-left: 108px;
+
+    
 }
 .logImg{
     display: flex;
-    text-align: center;
+    text-align: end;
     margin: 0 auto;
 }
-.colstyle{
+/* .colstyle{
     background: white;
     padding: 34px;
-}
+} */
 .form-control{
-    border-radius: 20px;
+    /* border-radius: 20px; */
     box-shadow: 0 0 2px
 }
 .label{
-    margin-left: 13px;
+    /* margin-left: 13px; */
     font-size: 15px;
 
+}
+.logInForm{
+    /* border: 1px solid; */
+    min-width: 250px;
+    /* padding: 80px; */    
+    padding: 40px;
+
+}
+.cardstyle{
+    height: 150px;
+    background: lightblue;
+    padding: 40px 20px;
+
+}
+.forgetbtn{
+    text-decoration:underline; 
 }
 /* .card{
     margin-top: 80px;

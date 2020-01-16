@@ -2,14 +2,22 @@
 
   <div class="container">
 
-      <div class="row border">
+      <div class="row main">
 
         <div class="col-md-6">
-          <img src="../../assets/images/login image.jpg" height="400" class="logImg">
+          <img src="../../assets/images/login image.jpg" height="450" class="logImg">
         </div>
 
         <div class="col-md-6 colstyle">
-              <h1 class="text-center">User Login</h1>
+
+          <div class="card mx-auto">
+            <div class="card-body p-0">
+              <div class="cardstyle">
+                <h6>Welcome to </h6>
+                <h2 class="p-0 title">Freindshub</h2>
+              </div>
+          <div class="logInForm">
+              <h3 class="text-center">User Login</h3>
               <hr>
               <form>
                 <div class="form-group">
@@ -20,12 +28,17 @@
                   <label for="exampleInputpassword" class="label">Password</label>
                   <input type="password" class="form-control" id="exampleInputpassword" aria-describedby="emailHelp" placeholder="Enter Password" name="password"  [(ngModel)]="logindata.password">
                 </div>
-                <div >
+                <div class="mt-2 d-flex justify-content-end">
                   <button type="button" class="btn btn-success  mr-2" (click)="login()" routerLinkActive="router-link-active" >Submit</button>
-                  <button type="button" class="btn btn-primary   float-right"[routerLink]="['/registration']" >Register</button>
+                  <button type="button" class="btn btn-primary "[routerLink]="['/registration']" >Register</button>
                  </div>
+                
+                 <a  [routerLink]="['/forgetpassword']" class="text-primary forgetbtn"  (click)="resetpassword()">Forgot Password</a>
               </form>
+            </div>
         </div>
+      </div>
+      </div>
       </div>
   </div>
 

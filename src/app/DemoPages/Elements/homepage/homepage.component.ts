@@ -13,10 +13,16 @@ import { Button } from 'selenium-webdriver';
 })
 export class HomepageComponent implements OnInit,AfterViewInit {
   @ViewChild('id1') p1:ElementRef;
+  @ViewChild('id2') p2:ElementRef;
+  logindata={
+    commentonpost:''
+  }
  array:any;
  array1:any;
  array2:any;
  array3:any;
+ commentarray:any;
+ commentarray1:any;
  image:string=''
  count:any=0;
  likescount:any;
@@ -140,6 +146,46 @@ export class HomepageComponent implements OnInit,AfterViewInit {
     }
 
     )
+
+
+   }
+   comment(selected:any){
+     console.log("comment");
+     console.log("Selected item Id: ", selected._id);
+     console.log(this.p2.nativeElement );
+     var x=this.p2.nativeElement;
+     console.log(x)
+     if (x.style.display ==="none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+    const payload = new FormData();
+     payload.append("to_id", selected._id);
+     this.auth.commentonpost(payload).subscribe(res=>{
+       this.commentarray=res;
+       this.commentarray1=this.commentarray.data;
+       console.log(this.commentarray1)
+       console.log(res);
+     })
+
+  
+   }
+   commentdata(selected:any){
+    console.log("Selected item Id: ", selected._id);
+    const payload = new FormData();
+    payload.append("commentonpost",this.logindata.commentonpost);
+     payload.append("to_id", selected._id);
+     
+     payload.append("from_id",localStorage.getItem('file1'))
+     console.log(this.logindata.commentonpost)
+     console.log(localStorage.getItem('file1'))
+     console.log(payload);
+     this.auth.commentonpostdata(payload).subscribe(res=>{
+       console.log(res);
+       window.location.reload();
+     })
+
 
 
    }

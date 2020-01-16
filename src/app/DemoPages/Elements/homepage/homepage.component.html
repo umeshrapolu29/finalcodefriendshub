@@ -27,15 +27,44 @@
               <div class="astyle d-flex justify-content-around">
                 <a class="btn" (click)="displaycount(hero) "><i class="fa fa-thumbs-up fa-1x mr-1"></i><span
                     class="">Like</span></a>
-                <a class="btn"><i class="fa fa-comments fa-1x mr-1"></i><span class="">comment</span></a>
+                <a class="btn" (click)="comment(hero)"><i class="fa fa-comments fa-1x mr-1" ></i><span>comment</span></a>
+                
                 <a class="btn"><i class="fa fa-share-alt mr-1"></i><span class="">share</span></a>
+              </div>
+              <div #id2 style="display: none;">
+                <div class="card" >
+                  <div class="card-body d-flex  align-items-center" *ngFor='let hero of commentarray1'>
+                      <img src="{{hero.from_id}}" class="rounded-circle" width="40px" height="40px">
+                      <h6 class="mt-2 ml-2">{{hero.commentonpost}}</h6>
+                   
+                  </div>
+                  <div class="input-group mb-3">
+                      <input type="text" class="form-control" name="commentonpost"  [(ngModel)]="logindata.commentonpost"  aria-label="Recipient's username" aria-describedby="button-addon2">
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="button-addon2" (click)="commentdata(hero)">Button</button>
+                      </div>
+                    </div>
+                </div>
+
               </div>
             </div>
 
           </div>
+          <!-- <div #id2 style="display: none;">
+              <div class="card">
+                <div class="card-body">
+                  <h1>comment</h1>
+                </div>
+                <textarea name="comment" form="usrform">Comment Here..</textarea>
+  
+              </div>
+  
+            </div>
+         
+           -->
 
         </div>
-        <br><br>
+         <br><br>
       </div>
       <div class="col">
 
@@ -48,14 +77,11 @@
               #id1>ADDFRIEND</button>
 
           </div>
-
-
-
-
         </div>
         <pagination-controls (pageChange)="u=$event"></pagination-controls>
       </div>
     </div>
   </div>
+  
 
 </div>

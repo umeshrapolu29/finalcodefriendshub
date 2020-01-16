@@ -105,5 +105,30 @@ export class AuthService {
       return  this.http.post("http://localhost:3001/user/requestaccepetedfromdata",getdata,
       {headers:headers})
     }
+    forgetpassword(getdata){
+      const headers=new HttpHeaders()
+
+      return this.http.post("http://localhost:3001/user/forgotpassword",getdata,
+      {headers:headers})
+    }
+    resetpassword(getdata){
+      const headers=new HttpHeaders()
+
+      return this.http.post("http://localhost:3001/user/resetpassword",getdata,
+      {headers:headers})
+    }
+    commentonpost(getdata){
+      const headers=new HttpHeaders()
+
+      return this.http.post("http://localhost:3001/user/retrivecommentonpost",getdata,
+      {headers:headers})
+    }
+    commentonpostdata(getdata){
+      const headers=new HttpHeaders()
+
+      return this.http.post("http://localhost:3001/user/commentonpost",getdata,
+      {headers:headers})
+    }
+    
     
   }
