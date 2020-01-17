@@ -1,45 +1,41 @@
 <div class="" [class]="'app-sidebar sidebar-shadow ' + (config$ | async).sidebarTheme" >   
-  <!-- <div class="d-flex ">      
-      <button type="button" class="hamburger close-sidebar-btn hamburger--elastic ml-4 text-white"
-              [ngClass]="{'is-active' : globals.toggleSidebar}" (click)="toggleSidebar()">
-        <span class="hamburger-box">
-            <span class="hamburger-inner" ></span>
-        </span>
-      </button>
-    
-       <div class="app-header__logo ml-3">
-       
-    </div>  
-  </div  > -->
-  <div class="background mr-5">
-      <img  src="{{file}}" alt="OCR"    
-       class="rounded mr-2 ">
-  </div> 
 
+  <div class="imagebackground mt-3">
+      <img  src="{{file}}" alt="OCR"    
+       class="rounded ">
+       <div>
+        <h2 class="namestyle mt-2 mb-0">{{name}}</h2>
+        <h6><i class="fas fa-user-tie mr-2"></i>HR Operations</h6>
+    </div>
+    <hr>
+  </div> 
+ 
 
   
   
     
 
   <div (mouseover)="sidebarHover()"
-  (mouseout)="sidebarHover()" class="app-sidebar-content" style=" background-color: #f5f5f5;">
+  (mouseout)="sidebarHover()" class="app-sidebar-content" style=" background-color: white;">
     <div class="app-sidebar-scroll">
       <perfect-scrollbar [autoPropagation]="true">
         
         <div class="v-sidebar-menu vsm-default">
           <div class="vsm-list">
             <!-- <ngb-accordion [destroyOnHide]="false" [closeOthers]="true" [activeIds]="extraParameter"> -->
-                <div>
-                    <h2 class="namestyle">{{name}}</h2>
-                </div>
-                <nav class="nav flex-column">
-                    <a class="nav-link active" routerLink="/elements/homepage">Home</a>
-                    <a class="nav-link" routerLink="/elements/friends">Friends</a>
-                    <a class="nav-link" routerLink="/elements/photos" >Photos</a>
-                    <a class="nav-link" routerLink="/elements/freindrequests">Requests<span class="badge badge-info">{{Arraylength}}</span></a>
-                    <a class="nav-link " routerLink="/elements/posting" tabindex="-1" aria-disabled="true">Add Post</a>
-                    <a class="nav-link " routerLink="elements/forgetpassword" tabindex="-1" aria-disabled="true">About</a>
+               
+
+            
+              
+                <nav class="nav flex-column menuItems">
+                    <a class="nav-link active" routerLink="/elements/homepage"><i class="far fa-compass fa-fw"></i>Home</a>
+                    <a class="nav-link" routerLink="/elements/friends"><i class="fas fa-users fa-fw"></i>Connections</a>
+                    <a class="nav-link" routerLink="/elements/photos" ><i class="far fa-images fa-fw"></i>Gallery</a>
+                    <a class="nav-link" routerLink="/elements/freindrequests"><i class="fas fa-handshake fa-fw"></i>Invitations<span class="badge badge-info float-right mt-1">{{Arraylength}}</span></a>
+                    <a class="nav-link " routerLink="/elements/posting" tabindex="-1" aria-disabled="true"><i class="fas fa-pen-nib fa-fw"></i>Add Post</a>
+                    <a class="nav-link " routerLink="elements/forgetpassword" tabindex="-1" aria-disabled="true"><i class="far fa-address-card fa-fw"></i>About</a>
                   </nav>
+               
            
               <!-- <ngb-panel id="dashboardsMenu">
                 <ng-template ngbPanelHeader>

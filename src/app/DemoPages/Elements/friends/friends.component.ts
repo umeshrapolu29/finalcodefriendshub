@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,AfterViewInit,ViewChild,ElementRef } from '@angular/core';
 import{AuthService} from '../../../auth.service';
 import { HttpClient ,HttpParams} from '@angular/common/http';
 import { FormGroup, FormBuilder } from '@angular/forms';
@@ -9,11 +9,24 @@ import {  Router } from '@angular/router';
   templateUrl: './friends.component.html',
   styleUrls: ['./friends.component.css']
 })
-export class FriendsComponent implements OnInit {
+export class FriendsComponent implements OnInit,AfterViewInit  {
+  ngAfterViewInit(): void {
+    throw new Error("Method not implemented.");
+  }
+  @ViewChild('id1') p1:ElementRef;
+  @ViewChild('id2') p2:ElementRef;
  array:any;
  array1:any;
  array2:any;
  array3:any;
+ array4:any;
+ array5:any;
+ postid:string='';
+ value:string='';
+ addfriend={
+  id:localStorage.getItem('id')
+}
+
   constructor(private _httpclient:HttpClient,private auth:AuthService,private router:Router) { }
 
   ngOnInit() {
@@ -35,6 +48,21 @@ export class FriendsComponent implements OnInit {
       this.array2=res
       this.array3=this.array2.data;
     })
+    this._httpclient.get('http://localhost:3001/user/usernames').subscribe(
+      res=>{
+        console.log(res);
+        this.array4=res;
+        console.log("hello get profiles")
+        this.array5=this.array4.data
+        // console.log(this.array2)
+        // console.log(this.array1.data[10].file);
+        // this.image=this.array1[0].postimg
+       
+        
+       
+        console.log(this.postid +"postid is");
+      }
+    )
   }
   viewdetails(selected:any){
     console.log("Selected item Id: ",selected.requestfromname);
@@ -48,5 +76,36 @@ export class FriendsComponent implements OnInit {
     console.log(selected.requestto+"todata")
     this.router.navigate(['/elements/friendsdetails']);
   }
+  request( selected:any){
+    const payload = new FormData();
+   
+    this.p1.nativeElement.innerHTML = "Requested";
+    this.p1.nativeElement.style.background="green";
+    this.p1.nativeElement.value=this.value;
+    console.log(this.value+"value is");
+ 
 
+   
+
+    payload.append('requestfrom',localStorage.getItem('username'));
+    //payload.append('requestfromname',localStorage.getItem('username'));
+    payload.append('file',localStorage.getItem('file1'));
+    //console.log(localStorage.getItem('file'))
+
+    payload.append("requestto", selected.username);
+    payload.append("requesttofile", selected.file);
+    console.log(selected.username)
+    console.log(selected.file+"file is")
+
+    console.log(localStorage.getItem('username'))
+     
+  
+      console.log(this.addfriend);
+    this.auth.addfriend(payload).subscribe(res=>{
+      console.log(res);
+    }
+
+    )
+
+}
 }

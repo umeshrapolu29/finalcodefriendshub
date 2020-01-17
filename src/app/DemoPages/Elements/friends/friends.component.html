@@ -39,4 +39,16 @@
 
   </div>
 
+  <div class="card card1" *ngFor="let hero of array5| paginate: {itemsPerPage:1, currentPage:u}">
+    <div class="card-body">
+      <div class=""><img src="{{hero.file}}" class="rounded" width="200px" height="200px"> </div>
+
+      <p class="sty8">{{hero.firstname|uppercase}}</p>
+      <button type="button" class="btn btn-primary sty7" (click)="request(hero)" value="Requested"
+        #id1>ADDFRIEND</button>
+
+    </div>
+  </div>
+  <pagination-controls (pageChange)="u=$event"></pagination-controls>
+
 </div>

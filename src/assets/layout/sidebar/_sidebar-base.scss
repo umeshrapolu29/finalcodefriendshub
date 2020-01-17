@@ -98,7 +98,7 @@ $sidebar-box-shadow: 7px 0 60px rgba(0, 0, 0, 0.05);
 
 .v-sidebar-menu {
   width: auto !important;
-  padding: 0 $layout-spacer-x $layout-spacer-x;
+  // padding: 0 $layout-spacer-x $layout-spacer-x;
 
   %side-link-hover {
     // background: $dropdown-link-hover-bg;

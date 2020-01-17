@@ -16,33 +16,53 @@ body {
     color: black;
     font-size: 16px;
   }
-  .background{
-    padding: 10px;
-    margin-left: 32px;
+  .imagebackground{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
   }
   .rounded{
-    width: 115px;
-    border: 1px solid black;
+    width: 90px;
+    border: 1px solid #3a3a3a;
     box-shadow: 0px 1px 2px 0px;
-    height: 115px;
+    height: 90px;
   }
   .bgcolor:hover{
     background-color: white;
 
   }
   .nav {
-    font-size: 20px;
+    font-size: 15px;
   }
   .namestyle{
-    margin-left: 13px;
-    font-size: 33px;
+   
+    font-size: 30px;
     color: black;
   }
   .nav-link:focus{
-    background: black;
-    color: white;
-    border-radius: 20px;
+    background: lightblue;
+    font-weight: 500;
+    color: #033C73;
   }
+  .menuItems{
+    background: rgba(173, 216, 230, 0.2);
+    /* border-radius: 10px;
+    overflow: hidden; */
+  }
+  .menuItems i{
+    margin-right: 10px;
+  }
+  .nav-link:hover{
+    font-weight: 500;
+    /* background: rgba(173, 216, 230, 0.4); */
+  }
+  .badge{
+    width: 20px;
+  }
+ 
   /* .nav-link:hover{
     background: red;
   } */
