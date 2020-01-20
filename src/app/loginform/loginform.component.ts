@@ -63,6 +63,8 @@ export class LoginformComponent implements OnInit {
         if(this.status==this.array.msg)
         {
           localStorage.setItem('file1',this.array.data.file)
+          localStorage.setItem('id',this.array.data._id)
+
           console.log(this.array.data.file);
           // Swal.fire('','Login Successful','success')
           this._router.navigate(['/elements/homepage'])

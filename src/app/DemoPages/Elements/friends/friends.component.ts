@@ -48,21 +48,18 @@ export class FriendsComponent implements OnInit,AfterViewInit  {
       this.array2=res
       this.array3=this.array2.data;
     })
-    this._httpclient.get('http://localhost:3001/user/usernames').subscribe(
-      res=>{
-        console.log(res);
+   
+    const payload2 = new FormData();
+    payload2.append('id',localStorage.getItem('id'));
+    console.log(localStorage.getItem('id')+"id is")
+    this.auth.getusernames(payload2).subscribe(res=>{
+      console.log(res +"is");
         this.array4=res;
-        console.log("hello get profiles")
+      
         this.array5=this.array4.data
-        // console.log(this.array2)
-        // console.log(this.array1.data[10].file);
-        // this.image=this.array1[0].postimg
-       
-        
-       
-        console.log(this.postid +"postid is");
-      }
-    )
+        console.log(this.array5)
+
+    })
   }
   viewdetails(selected:any){
     console.log("Selected item Id: ",selected.requestfromname);

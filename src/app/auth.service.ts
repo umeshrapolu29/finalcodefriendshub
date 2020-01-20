@@ -36,6 +36,13 @@ export class AuthService {
        return this.http.post("http://localhost:3001/user/login",logindata,
        {headers:headers})
     }
+    getusernames(logindata){
+      const headers=new HttpHeaders()
+      console.log(logindata);
+
+       return this.http.post("http://localhost:3001/user/usernames",logindata,
+       {headers:headers})
+    }
     posting(postingdata){
       const headers=new HttpHeaders()
       console.log(postingdata);
