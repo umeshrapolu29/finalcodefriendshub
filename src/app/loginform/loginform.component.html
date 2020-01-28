@@ -1,50 +1,67 @@
- <div class="container-fluid">
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile>1</mat-grid-tile>
+  <mat-grid-tile>2</mat-grid-tile>
+  <mat-grid-tile>3</mat-grid-tile>
+  <mat-grid-tile>4</mat-grid-tile>
+</mat-grid-list>
 
+
+
+
+<!-- <div class="container-fluid">
   <div class="container">
-
-      <div class="row main">
-
-        <div class="col-md-6">
-          <img src="../../assets/images/login image.jpg" height="450" class="logImg">
-        </div>
-
-        <div class="col-md-6 colstyle">
-
-          <div class="card mx-auto">
-            <div class="card-body p-0">
-              <div class="cardstyle">
-                <h6>Welcome to </h6>
-                <h2 class="p-0 title">Freindshub</h2>
-              </div>
-          <div class="logInForm">
-              <h3 class="text-center">User Login</h3>
+    <div class="row main">
+      <div class="col-md-6">
+        <img src="../../assets/images/login image.jpg" height="450" class="logImg">
+      </div>
+      <div class="col-md-6 colstyle">
+        <div class="card mx-auto">
+          <div class="card-body p-0">
+            <div class="cardstyle">
+              <h6>Welcome to </h6>
+              <h2 class="p-0 title">Friendshub</h2>
+            </div>
+            <div class="logInForm">
+              <h5 class="text-center">User Login</h5>
               <hr>
               <form>
-                <div class="form-group">
-                  <label for="exampleInputEmail1" class="label">User Name</label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Username" name="username"  [(ngModel)]="logindata.username">
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputpassword" class="label">Password</label>
-                  <input type="password" class="form-control" id="exampleInputpassword" aria-describedby="emailHelp" placeholder="Enter Password" name="password"  [(ngModel)]="logindata.password">
-                </div>
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="username" name="Username" [(ngModel)]="logindata.username"
+                    autocomplete="off">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                  <input type="password" matInput placeholder="password" name="password"
+                    [(ngModel)]="logindata.password">
+                </mat-form-field>
+
                 <div class="mt-2 d-flex justify-content-end">
-                  <button type="button" class="btn btn-success  mr-2" (click)="login()" routerLinkActive="router-link-active" >Submit</button>
-                  <button type="button" class="btn btn-primary "[routerLink]="['/registration']" >Register</button>
-                 </div>
-                
-                 <a  [routerLink]="['/forgetpassword']" class="text-primary forgetbtn"  (click)="resetpassword()">Forgot Password</a>
+                  <button type="button" class="btn btn-success mr-2" (click)="login()"
+                    routerLinkActive="router-link-active">Submit</button>
+                  <button type="button" class="btn btn-primary" [routerLink]="['/registration']">Register</button>
+                </div>
+                <div class="d-flex justify-content-center mt-5">
+                  <a [routerLink]="['/forgetpassword']" class="text-primary forgetbtn text-center"
+                    (click)="resetpassword()">Forgot Password</a>
+                </div>
               </form>
             </div>
+          </div>
         </div>
       </div>
-      </div>
-      </div>
+    </div>
   </div>
-
-
-</div> 
-
+</div> -->
+<!-- input tags -->
+ <!-- <div class="form-group">
+                  <label for="exampleInputEmail1" class="label">User Name</label>
+                  <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Username" name="username"  [(ngModel)]="logindata.username" autocomplete="off" >
+                </div> -->
+<!-- <div class="form-group">
+                  <label for="exampleInputpassword" class="label">Password</label>
+                  <input type="password" class="form-control" id="exampleInputpassword" aria-describedby="emailHelp" placeholder="Enter Password" name="password"  [(ngModel)]="logindata.password">
+                </div> -->
+<!-- input tags End -->
 
 <!-- <div class="container-fluid">
   <div class="container">

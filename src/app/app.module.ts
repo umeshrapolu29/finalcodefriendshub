@@ -144,6 +144,9 @@ import { ResetpasswordComponent } from './DemoPages/Elements/resetpassword/reset
 
 import { MessengerComponent } from './DemoPages/Elements/messenger/messenger.component';
 
+import {MatGridListModule} from '@angular/material/grid-list';
+
+
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
 };
@@ -157,6 +160,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     BaseLayoutComponent,
     PagesLayoutComponent,
     PageTitleComponent,
+    MatGridListModule,
     // HEADER
 
     HeaderComponent,
@@ -258,7 +262,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     PhotosComponent,
     ForgetpasswordComponent,
     ResetpasswordComponent,
-  
+ 
     MessengerComponent, 
   ],
   imports: [
@@ -273,6 +277,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MatDialogModule,
     MatInputModule,
     NgxPaginationModule,
+    MatGridListModule,
+    
     // Angular Bootstrap Components
 
     PerfectScrollbarModule,
@@ -282,6 +288,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     ReactiveFormsModule,
     HttpClientModule,
     MatFormFieldModule,
+    
     // Charts
     MatSelectModule,
     ChartsModule,

@@ -48,9 +48,14 @@
     padding: 40px;
 
 }
+
+mat-form-field-infix{
+width: 290px !important;
+}
 .cardstyle{
+    background-image: url('/src/assets/images/login-bg.png');
     height: 150px;
-    background: lightblue;
+    /* background: #81a9fe; */
     padding: 40px 20px;
 
 }
