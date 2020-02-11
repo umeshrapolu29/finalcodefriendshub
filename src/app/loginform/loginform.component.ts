@@ -13,7 +13,8 @@ import { Router } from '@angular/router';
 })
 export class LoginformComponent implements OnInit {
   logindata={
-    username:''
+    username:'',
+    password:''
   }
   array:any;
   status:string='Login Successfull';

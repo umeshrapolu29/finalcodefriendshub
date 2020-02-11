@@ -39,8 +39,6 @@ export class ResetpasswordComponent implements OnInit {
         Swal.fire('',' Invalid Token','error')
       }
 
-   
-
     })
   }
 

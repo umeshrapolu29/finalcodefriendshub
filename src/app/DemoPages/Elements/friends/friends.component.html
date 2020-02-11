@@ -39,7 +39,7 @@
 
   </div>
 
-  <div class="card card1" *ngFor="let hero of array5| paginate: {itemsPerPage:1, currentPage:u}">
+  <div class="card card1" *ngFor="let hero of array5| paginate: {itemsPerPage:1, currentPage:page}">
     <div class="card-body">
       <div class=""><img src="{{hero.file}}" class="rounded" width="200px" height="200px"> </div>
 
@@ -49,6 +49,6 @@
 
     </div>
   </div>
-  <pagination-controls (pageChange)="u=$event"></pagination-controls>
+  <pagination-controls (pageChange)="page=$event"></pagination-controls>
 
 </div>
